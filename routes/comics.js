@@ -9,7 +9,6 @@ router.get("/comics", async (req, res) => {
         process.env.API_KEY
       }&title=${req.query.title || ""}&skip=${req.query.skip || 0}`
     );
-    // console.log(response.data);
 
     res.json(response.data);
   } catch (error) {
