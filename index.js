@@ -8,9 +8,11 @@ app.use(cors());
 
 const charactersRoute = require("./routes/characters");
 const comicsRoute = require("./routes/comics");
+const favoritesRoute = require("./routes/favoris");
 
 app.use(charactersRoute);
 app.use(comicsRoute);
+app.use(favoritesRoute);
 
 app.all("*", (req, res) => {
   res.status(404).json({ error: "Not Found" });
